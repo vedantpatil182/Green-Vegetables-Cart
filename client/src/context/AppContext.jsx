@@ -7,7 +7,9 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 if (!backendUrl) {
-    console.error("VITE_BACKEND_URL is not defined! API calls will fail on Vercel.");
+    console.error("VITE_BACKEND_URL is missing! Requests will fail with 405 on Vercel unless this is set in Dashboard.");
+} else {
+    console.log("Using Backend URL:", backendUrl);
 }
 axios.defaults.baseURL = backendUrl || '';
 
