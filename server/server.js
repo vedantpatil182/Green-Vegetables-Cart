@@ -25,7 +25,8 @@ const allowedOrigins = [
     'http://localhost:5175', 'http://127.0.0.1:5175',
     'http://localhost:5176', 'http://127.0.0.1:5176',
     'http://localhost:5177', 'http://127.0.0.1:5177',
-    'http://localhost:5178', 'http://127.0.0.1:5178'
+    'http://localhost:5178', 'http://127.0.0.1:5178',
+    'https://green-cart-client-ten.vercel.app'
 ]
 
 app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks)
