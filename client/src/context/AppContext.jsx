@@ -5,7 +5,11 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+let backendUrl = import.meta.env.VITE_BACKEND_URL;
+if (backendUrl && !backendUrl.startsWith('http')) {
+    backendUrl = 'https://' + backendUrl;
+}
+
 if (!backendUrl) {
     console.error("VITE_BACKEND_URL is missing! Requests will fail with 405 on Vercel unless this is set in Dashboard.");
 } else {
