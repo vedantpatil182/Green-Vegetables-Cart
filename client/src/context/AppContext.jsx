@@ -5,7 +5,11 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+if (!backendUrl) {
+    console.error("VITE_BACKEND_URL is not defined! API calls will fail on Vercel.");
+}
+axios.defaults.baseURL = backendUrl || '';
 
 export const AppContext = createContext();
 
