@@ -1,4 +1,4 @@
-# GreenCart - Full-Stack E-commerce Platform
+# Green(Vegetables)Cart - Full-Stack E-commerce Platform
 
 GreenCart is a modern, feature-rich e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js). It features a sleek design, smooth animations, and robust functionality for both buyers and sellers.
 
